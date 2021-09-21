@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root{
+    --color-main: #262c3b;
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.sidebar {
+   width: 280px; 
+   position: fixed;
+   left: 0;
+   top: 0;
+   height: 100%;
+}
+
+.sidebar-brand {
+    height: 100px;
+}
+
+.brand-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content {
+    margin-left: 280px;
+}
