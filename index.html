@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Catasys Admin</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/styleGrid.css">
 </head>
 <body>
     <!-- begin side-bar-menu -->
-    <div class="sidebar">
+    <div id="sidemenu" class="sidebar-min">
         <div class="sidebar-brand">
             <div class="brand-flex">
-                <img src="./assets/img/logo-purple.svg" alt="logo-purple" width="30px" >
-                <div class="brand-icons">
+                <img id="img-app" src="./assets/img/logo-green.svg" alt="logo-green" width="40px" >
+                <h3 id="title-app">Catasys</h3>
+                <div id="title-icons" class="brand-icons">
                     <span class="las la-bell"></span>
                     <span class="las la-user-circle"></span>
                 </div>
             </div>
         </div>
-        <!-- begin menu -->
+        <!-- begin Secciones -->
         <div class="sidebar-main">
             <div class="sidebar-user">
-                <img src="./assets/img/userBlur.jpg" alt="logo-pink">
+                <img src="./assets/img/user_car.jpg" alt="logo-pink">
                 <div>
-                    <h3>Rangel Diaz</h3>
-                    <span>luis.rangeldiaz@gmail.com</span>
+                    <h3 id="user-name">Rangel Diaz</h3>
+                    <span id="user-mail" >luis.rangeldiaz@gmail.com</span>
                 </div>
             </div>
             <div class="sidebar-menu">
@@ -34,64 +36,79 @@
                     <span>Tableros</span>
                 </div>
                 <ul>
-                    <li><a href="">
-                        <span class="las la-balance-scale"></span>
-                        Finanzas
-                    </a></li>
-                    <li><a href="">
-                        <span class="las la-chart-pie"></span>
-                        Analisis
-                    </a></li>
+                    <li><a data-title="Finanzas" href="">
+                        <i class="las la-balance-scale"></i>
+                        <p>Finanzas</p>
+                    </a>
+                </li>
+                    <li><a data-title="Analisis" href="">
+                        <i class="las la-chart-pie"></i>
+                        <p>Analisis</p>
+                    </a>
+                </li>
                 </ul>
                 <div class="menu-head">
                     <span>Aplicaciones</span>
                 </div>
                 <ul>
-                    <li><a href="">
-                        <span class="las la-calendar"></span>
-                        Calendario
-                    </a></li>
-                    <li><a href="">
-                        <span class="las la-users"></span>
-                        Usuarios
-                    </a></li>
-                    <li><a href="">
-                        <span class="las la-wallet"></span>
-                        Pagos
-                    </a></li>
-                    <li><a href="">
-                        <span class="las la-house-damage"></span>
-                        Predial
-                    </a></li>
-                    <li><a href="">
-                        <span class="las la-folder-minus"></span>
-                        Avaluos
-                    </a></li>
-                    <li><a href="">
-                        <span class="las la-book"></span>
-                        Traslados
-                    </a></li>
-                    <li><a href="">
-                        <span class="las la-file-alt"></span>
-                        Formatos
-                    </a></li>
+                    <li><a data-title="Calendario" href="">
+                        <i class="las la-calendar"></i>
+                        <p>Formularios</p>
+                    </a>
+                </li>
+                    <li><a data-title="Pagos" href="">
+                        <i class="las la-wallet"></i>
+                        <p>Botones</p>
+                    </a>
+                </li>
+                    <li><a data-title="Predial" href="">
+                        <i class="las la-house-damage"></i>
+                        <p>Alertas</p>
+                    </a>
+                </li>
+                    <li><a data-title="Avaluos" href="">
+                        <i class="las la-folder-minus"></i>
+                        <p>Avaluos</p>
+                    </a>
+                </li>
+                    <li><a data-title="Traslados" href="">
+                        <i class="las la-book"></i>
+                        <p>Traslados</p>
+                    </a>
+                </li>
+                    <li><a data-title="Formatos" href="">
+                        <i class="las la-file-alt"></i>
+                        <p>Formatos</p>
+                    </a>
+                </li>
                 </ul>
                 <div class="menu-head">
-                    <span>Soporte</span>
+                    <span>Panel</span>
                 </div>
-                <li><a href="">
-                    <span class="las la-universal-access"></span>
-                    Soporte Tecnico
-                </a></li>
+                <li><a data-title="Usuarios" href="">
+                    <i class="las la-users"></i>
+                    <p>Usuarios</p>
+                </a>
+            </li>
+                <li><a data-title="Soporte Tecnico" href="">
+                    <i class="las la-universal-access"></i>
+                    <p>Soporte Tecnico</p>
+                </a>
+            </li>
             </div>
         </div>
-        <!-- end menu -->
+        <!-- end Secciones -->
+
     </div>
     <!-- end side-bar-menu -->
-    <div class="main-content">
-        <header>
-            <span class="bars"></span>
-            <div>
+    <div id="main-content" class="main-content-min">
+        <header class="head-min">
+            <div class="menu-toggle">
+                <label for="">
+                    <span class="las la-bars" id="btn-menu"></span>
+                </label>
+            </div>
+            <div class="header-icons" >
                 <span class="las la-search"></span>
                 <span class="las la-bookmark"></span>
                 <span class="las la-sms"></span>
@@ -103,21 +120,282 @@
                     <h1>Tablero Estadisticas</h1>
                     <small>Monitor Keys Metrics. Check Reporten and review insights</small>
                 </div>
-                <div>
+                <div class="header-actions">
                     <button>
-                        <span class="las la-file-export">
-                            Exportar
-                        </span>
+                        <span class="las la-file-export"></span> Exportar
                     </button>
                     <button>
-                        <span class="las la-tools">
-                            Configuracion
-                        </span>
+                        <span class="las la-tools"></span> Configuracion
                     </button>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card-single">
+                    <div class="card-header-under">
+                        <span>Recaudacion</span>
+                        <div class="card-icons">
+                            <span class="las la-sync"></span>
+                            <span class="las la-angle-up"></span>
+                            <!-- <span class="las la-angle-down"></span> -->
+                        </div>
+                    </div>
+                    <div class="card-flex">
+                        <div class="card-info">
+                            <div class="card-head">
+                                <small>Importe de Recaudacion</small>                                
+                            </div>
+                            <h2>9,198.50</h2>
+                            <small>2% Reduccion de Recaudacion</small>
+                        </div>
+                        <div class="card-chart">
+                            <span class="las la-chart-line"></span>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="card-single card-green">
+                    <div class="card-header-under">
+                        <span>Traslados</span>
+                        <div class="card-icons">
+                            <span class="las la-sync"></span>
+                            <span class="las la-angle-up"></span>
+                            <!-- <span class="las la-angle-down"></span> -->
+                        </div>
+                    </div>
+                    <div class="card-flex">
+                        <div class="card-info">
+                            <div class="card-head">
+                                <small>Importe de por Traslados</small>                                
+                            </div>
+                            <h2>6,085</h2>
+                            <small>4% Aumento de por Traslados</small>
+                        </div>
+                        <div class="card-chart">
+                            <span class="las la-chart-line"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-single card-secondary">
+                    <div class="card-header-under">
+                        <span>Avaluos</span>
+                        <div class="card-icons">
+                            <span class="las la-sync"></span>
+                            <span class="las la-angle-up"></span>
+                            <!-- <span class="las la-angle-down"></span> -->
+                        </div>
+                    </div>
+                    <div class="card-flex">
+                        <div class="card-info">
+                            <div class="card-head">
+                                <small>Cantidad de Avaluos diarios</small>                                
+                            </div>
+                            <h2>85</h2>
+                            <small>3% Reduccion Avaluos</small>
+                        </div>
+                        <div class="card-chart">
+                            <span class="las la-chart-line"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-single card-secondary">
+                    <div class="card-header-under">
+                        <span>Predios Registrados</span>
+                        <div class="card-icons">
+                            <span class="las la-sync"></span>
+                            <span class="las la-angle-up"></span>
+                            <!-- <span class="las la-angle-down"></span> -->
+                        </div>
+                    </div>
+                    <div class="card-flex">
+                        <div class="card-info">
+                            <div class="card-head">
+                                <small>Numero de Predios</small>                                
+                            </div>
+                            <h2>68,198</h2>
+                            <small>0.8% Crecimiento de predios</small>
+                        </div>
+                        <div class="card-chart">
+                            <span class="las la-chart-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards">    
+                <div class="card-grid">
+                    <div class="card-grid-header">
+                        <span>Formulario 1</span>
+                        <div class="card-icons">
+                            <a data-action="reload"><i class="las la-sync"></i></a>
+                            <a data-action="collapse"><i class="las la-angle-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-grid-container">
+                        <div class="card-items-form">
+                            <form>
+                                <div class="form-container">
+                                    <div class="form-row-grid">
+                                        <div class="form-element">
+                                            <label for="nombre"><i class="las la-portrait"></i> Nombre</label>
+                                            <input type="text" name="nombre" id="nombre" class="form-style">
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="apellido"><i class="las la-portrait"></i> Apellido Paterno</label>
+                                            <input type="text" name="apellido" id="apellido">
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="apellido"><i class="las la-portrait"></i> Apellido Materno</label>
+                                            <input type="text" name="apellido" id="apellido">
+                                        </div>
+                                    </div>
+                                    <div class="form-row-grid">
+                                        <div class="form-element">
+                                            <label for="direccion"><i class="las la-portrait"></i> Fecha</label>
+                                            <input type="date" name="fecha" id="fecha" class="form-style">
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="telefono"><i class="las la-portrait"></i> Telefono</label>
+                                            <input type="text" name="telefono" id="telefono">
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="Mail"><i class="las la-portrait"></i> Mail</label>
+                                            <input type="text" name="Mail" id="Mail">
+                                        </div>
+                                    </div>
+                                    <div class="form-row-grid">
+                                        <div class="form-element">
+                                            <label for="direccion"><i class="las la-portrait"></i> Direccion</label>
+                                            <textarea name="comentarios" id="comentarios" cols="20" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-row-grid-btn">
+                                        <button class="button-gral btn-success"><i class="las la-check"></i> Guardar</button>
+                                        <button class="button-gral btn-danger"><i class="las la-window-close"></i> Cancelar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-grid-footer">
+                        <span>Pie</span>
+                        <div class="form-row-grid-btn">
+                            <button class="button-success"><i class="las la-check"></i> Guardar</button>
+                            <button class="button-danger"><i class="las la-window-close"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-grid">
+                    <div class="card-grid-header">
+                        <span>Formulario 2</span>
+                        <div class="card-icons">
+                            <a data-action="reload"><i class="las la-sync"></i></a>
+                            <a data-action="collapse"><i class="las la-angle-up"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-grid-container">
+                        <div class="card-items-form">
+                            <form>
+                                <div class="form-container">
+                                    <div class="form-row-grid">
+                                        <div class="form-element">
+                                            <label for="nombre"><i class="las la-portrait"></i> Nombre</label>
+                                            <input type="text" name="nombre" id="nombre" class="form-style">
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="apellido"><i class="las la-portrait"></i> Apellido Paterno</label>
+                                            <input type="text" name="apellido" id="apellido">
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="apellido"><i class="las la-portrait"></i> Apellido Materno</label>
+                                            <input type="text" name="apellido" id="apellido">
+                                        </div>
+                                    </div>
+                                    <div class="form-row-grid">
+                                        <div class="form-element">
+                                            <label for="direccion"><i class="las la-portrait"></i> Direccion</label>
+                                            <input type="text" name="direccion" id="direccion" class="form-style">
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="telefono"><i class="las la-portrait"></i> Fecha</label>
+                                            <input type="date" name="telefono" id="telefono">
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="Mail"><i class="las la-portrait"></i> Mail</label>
+                                            <input type="text" name="Mail" id="Mail">
+                                        </div>
+                                    </div>
+                                    <div class="form-row-grid">
+                                        <div class="form-element">
+                                            <label for="direccion"><i class="las la-portrait"></i> Direccion</label>
+                                            <textarea name="comentarios" id="comentarios" cols="20" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-row-grid-btn">
+                                        <button class="button-gral btn-success"><i class="las la-check"></i> Guardar</button>
+                                        <button class="button-gral btn-danger"><i class="las la-window-close"></i> Cancelar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-single">
+                    <div class="card-header-under">
+                        <span>Tablas</span>
+                        <div class="card-icons">
+                            <span class="las la-sync"></span>
+                            <span class="las la-angle-up"></span>
+                            <!-- <span class="las la-angle-down"></span> -->
+                        </div>
+                    </div>
+                    <div class="card-flex">
+                        <div class="card-info">
+                            <div class="card-head">
+                                <small>Importe de Recaudacion</small>                                
+                            </div>
+                            <h2>9,198</h2>
+                            <small>2% Reduccion de Recaudacion</small>
+                        </div>
+                        <div class="card-chart">
+                            <span class="las la-chart-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-single">
+                    <div class="card-header-under">
+                        <span>Tablas3</span>
+                        <div class="card-icons">
+                            <span class="las la-sync"></span>
+                            <span class="las la-angle-up"></span>
+                            <!-- <span class="las la-angle-down"></span> -->
+                        </div>
+                    </div>
+                    <div class="card-flex">
+                        <div class="card-info">
+                            <div class="card-head">
+                                <small>Importe de Recaudacion</small>                                
+                            </div>
+                            <h2>9,085</h2>
+                            <small>2% Reduccion de Recaudacion</small>
+                        </div>
+                        <div class="card-chart">
+                            <span class="las la-chart-line"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
+
+    <!-- Begin Scripts -->
+    <script src="./js/menu.js"></script>
+    <!-- End Scripts -->
 
 </body>
 </html>
