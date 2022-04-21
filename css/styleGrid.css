@@ -291,7 +291,7 @@ header{
     transition: all 0.8s;
 }
 
-.menu-toggle label{
+/* .menu-toggle label{
     height: var(--height-top) * 15;
     width: var(--height-top) * 15;
     font-size: var(--size-icon);
@@ -304,7 +304,58 @@ header{
 
 .menu-toggle label:hover{
     background: var(--color-hover);
+} */
+
+
+/*Hamburguesa inicio*/
+.menu-toggle {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    /* background: #37a6ff; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
 }
+
+.menu-toggle::before{
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 0.18rem;
+    background: var(--color-primary);
+    transition: 0.4s;
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 0 var(--color-primary);
+}
+
+.menu-toggle::after{
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 0.18rem;
+    background: var(--color-primary);
+    transition: 0.2s;
+    transform: translateY(0.5rem);
+}
+
+/* .active{
+    background: #e46776;
+} */
+
+.active::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 var(--color-primary);
+    background: rgb(102, 102, 102);
+}
+
+.active::after{
+    transform: translateY(0px) rotate(-45deg);
+    background: rgb(102, 102, 102);
+}
+/*Hamburguesa Fin*/
 
 .header-icons span{
     display: inline-block;
@@ -316,13 +367,15 @@ header{
     margin-left: var(--width-full);
     transition: all 0.8s;
 }
+
+
 /*Contenido Expandido*/
 .main-content-min {
     margin-left: var(--width-minimus);
     transition: all 0.8s;
 }
 
-.main-content-min .menu-toggle label{
+/* .main-content-min .menu-toggle label{
     height: var(--height-top) * 15;
     width: var(--height-top) * 15;
     font-size: var(--size-icon);
@@ -331,7 +384,8 @@ header{
     border-radius: 30%;
     color: red;
     transition: all 0.8s;
-}
+} */
+
 /*Contenido Expandido*/
 
 main{
@@ -372,7 +426,7 @@ main{
 }
 
 .button-gral{
-    border-radius: 20px;
+    border-radius: 6px;
     border: 0;
     box-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.2);
     padding: 0.8em;
@@ -388,6 +442,14 @@ main{
 .btn-success{
     background: #0eb71c;
     color: whitesmoke;
+}
+
+.btntx-danger{
+    color: #b70e21;
+}
+
+.btntx-success{
+    color: #0eb71c;
 }
 
 .btn-warning{
@@ -454,8 +516,80 @@ main{
     display: grid;
     grid-template-columns: 1fr 40px;
     padding: 5px;
-    gap: 5px 8px;
+    gap: 15px 8px;
     color: gray;
+}
+
+.card-grid-alert-success{
+    background: rgb(100, 248, 95);
+    padding: 0.6rem 1rem;
+    height: 3rem;
+    min-width: 5rem;
+    align-items:center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    border-left: 0.5rem solid #0eb738;
+    overflow: hidden;
+}
+
+.card-grid-alert-success .icon{
+    color: grey;
+    font-size: 24px;
+    padding-right: 5px;
+}
+
+.card-grid-alert-success .msg{
+    color: grey;
+    font-size: 16px;
+    padding-right: 4.4rem;
+}
+
+.card-grid-alert-success .btn-close{
+    color: grey;
+    font-size: 24px;
+    padding: 1rem;
+    cursor: pointer;
+    background: #0eb738;
+
+}
+
+.card-grid-alert-danger{
+    background: rgb(248, 95, 95);
+    /* padding: 0.6rem 1rem; */
+    height: 3rem;
+    min-width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.5rem;
+    border-left: 0.5rem solid #b70e21;
+    overflow: hidden;
+    /* border-right: 2.5rem solid red; */
+}
+
+.card-grid-alert-danger .icon{
+    color: whitesmoke;
+    font-size: 24px;
+    padding-right: 5px;
+}
+
+.card-grid-alert-danger .msg{
+    color: whitesmoke;
+    font-size: 16px;
+
+}
+
+.card-grid-alert-danger .btn-close{
+    color: whitesmoke;
+    font-size: 24px;
+    padding: 1rem;
+    cursor: pointer;
+    background: #b70e21;
+    /* position: relative; */
+    /* right: 5rem; */
+
 }
 
 .card-grid-container{

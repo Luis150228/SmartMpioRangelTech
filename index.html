@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Catasys Admin</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo-green.svg">
     <link rel="stylesheet" href="./css/styleGrid.css">
 </head>
 <body>
@@ -103,10 +103,11 @@
     <!-- end side-bar-menu -->
     <div id="main-content" class="main-content-min">
         <header class="head-min">
-            <div class="menu-toggle">
-                <label for="">
+            <!-- <div id="toggle" class="hamburger"></div> -->
+            <div id="hamburger" class="menu-toggle">
+                <!-- <label for="">
                     <span class="las la-bars" id="btn-menu"></span>
-                </label>
+                </label> -->
             </div>
             <div class="header-icons" >
                 <span class="las la-search"></span>
@@ -227,10 +228,13 @@
                 <div class="card-grid">
                     <div class="card-grid-header">
                         <span>Formulario 1</span>
-                        <div class="card-icons">
-                            <a data-action="reload"><i class="las la-sync"></i></a>
-                            <a data-action="collapse"><i class="las la-angle-up"></i></a>
-                        </div>
+                    </div>
+                    <div class="card-grid-alert-danger" id="alert">
+                        <span class="icon las la-skull-crossbones"></span>
+                        <span class="msg"><Strong>Warning!!</Strong> Se presento un fallo en la tarea</span>
+                        <span class="btn-close">
+                            <span class="close las la-times"></span>
+                        </span>
                     </div>
                     <div class="card-grid-container">
                         <div class="card-items-form">
@@ -270,10 +274,10 @@
                                             <textarea name="comentarios" id="comentarios" cols="20" rows="5"></textarea>
                                         </div>
                                     </div>
-                                    <div class="form-row-grid-btn">
+                                    <!-- <div class="form-row-grid-btn">
                                         <button class="button-gral btn-success"><i class="las la-check"></i> Guardar</button>
                                         <button class="button-gral btn-danger"><i class="las la-window-close"></i> Cancelar</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </form>
                         </div>
@@ -281,18 +285,22 @@
                     <div class="card-grid-footer">
                         <span>Pie</span>
                         <div class="form-row-grid-btn">
-                            <button class="button-success"><i class="las la-check"></i> Guardar</button>
-                            <button class="button-danger"><i class="las la-window-close"></i> Cancelar</button>
+                            <button class="button-gral btntx-success"><i class="las la-check"></i> Guardar</button>
+                            <button class="button-gral btntx-danger"><i class="las la-window-close"></i> Cancelar</button>
                         </div>
                     </div>
                 </div>
+
                 <div class="card-grid">
                     <div class="card-grid-header">
                         <span>Formulario 2</span>
-                        <div class="card-icons">
-                            <a data-action="reload"><i class="las la-sync"></i></a>
-                            <a data-action="collapse"><i class="las la-angle-up"></i></a>
-                        </div>
+                    </div>
+                    <div class="card-grid-alert-success">
+                        <sp class="icon las la-info-circle"></span>
+                        <span class="msg"><Strong>Correcto!!</Strong> Se completo la tarea</span>
+                        <span class="btn-close">
+                            <span class="close las la-times"></span>
+                        </span>
                     </div>
                     <div class="card-grid-container">
                         <div class="card-items-form">
