@@ -229,8 +229,8 @@
                     <div class="card-grid-header">
                         <span>Formulario 1</span>
                     </div>
-                    <div class="card-grid-alert hide success">
-                        <span class="icon las la-star"></span>
+                    <div class="card-grid-alert show success">
+                        <i class="icon las la-star"></i>
                         <span class="msg"><Strong>Correcto!!</Strong> Se completo la tarea</span>
                         <span class="btn-close">
                             <span class="close las la-times"></span>
@@ -270,14 +270,24 @@
                                     </div>
                                     <div class="form-row-grid">
                                         <div class="form-element">
-                                            <label for="direccion"><i class="las la-portrait"></i> Direccion</label>
-                                            <textarea name="comentarios" id="comentarios" cols="20" rows="5"></textarea>
-                                        </div>
+                                            <label for="fecha"><i class="las la-portrait"></i>Estados</label>
+                                            <select name="edos" id="edos" class="form-style">
+                                                <option value="correcto">Correcto</option>
+                                                <option value="incorrecto">Incorrecto</option>
+                                                <option value="neutro">Neutro</option>
+                                                <option value="">Vacio</option>
+                                            </select>
+                                        </div>                                        
                                     </div>
-                                    <!-- <div class="form-row-grid-btn">
-                                        <button class="button-gral btn-success"><i class="las la-check"></i> Guardar</button>
-                                        <button class="button-gral btn-danger"><i class="las la-window-close"></i> Cancelar</button>
-                                    </div> -->
+                                    <div class="form-element-file">
+                                        <div class="up-area">
+                                            <input type="file" id="inpFile" name="inpFile" class="file-input" hidden>
+                                            <i class="las la-cloud-upload-alt"></i>
+                                            <p>Subir archivo</p>
+                                        </div>
+                                        <section class="section-file progress-area"></section>
+                                        <section class="section-file uploaded-area"></section>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -295,9 +305,9 @@
                     <div class="card-grid-header">
                         <span>Formulario 2</span>
                     </div>
-                    <div class="card-grid-alert danger">
-                        <span class="icon las la-skull-crossbones"></span>
-                        <span class="msg"><Strong>Error!!</Strong> Se presento un fallo en la tarea</span>
+                    <div class="card-grid-alert show danger">
+                        <i class="icon las la-skull-crossbones"></i>
+                        <span class="msg"><Strong>Correcto!!</Strong> Se completo la tarea</span>
                         <span class="btn-close">
                             <span class="close las la-times"></span>
                         </span>
@@ -336,26 +346,35 @@
                                     </div>
                                     <div class="form-row-grid">
                                         <div class="form-element">
-                                            <label for="direccion"><i class="las la-portrait"></i> Direccion</label>
-                                            <textarea name="comentarios" id="comentarios" cols="20" rows="5"></textarea>
+                                            <label for="fecha"><i class="las la-portrait"></i>Estados</label>
+                                            <select name="edos" id="edos" class="form-style">
+                                                <option value="correcto">Correcto</option>
+                                                <option value="incorrecto">Incorrecto</option>
+                                                <option value="neutro">Neutro</option>
+                                                <option value="">Vacio</option>
+                                            </select>
+                                        </div> 
+                                        
+                                        <div class="form-element">
+                                            <label for="Descripcion"><i class="las la-portrait"></i>Descripcion</label>
+                                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
                                         </div>
                                     </div>
-                                    <!-- <div class="form-row-grid-btn">
-                                        <button class="button-gral btn-success"><i class="las la-check"></i> Guardar</button>
-                                        <button class="button-gral btn-danger"><i class="las la-window-close"></i> Cancelar</button>
-                                    </div> -->
+                                    
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="card-grid-footer">
-                        <!-- <span>Pie</span> -->
+                        <span>Pie</span>
                         <div class="form-row-grid-btn">
                             <button class="button-gral btntx-success"><i class="las la-check"></i> Guardar</button>
                             <button class="button-gral btntx-danger"><i class="las la-window-close"></i> Cancelar</button>
                         </div>
                     </div>
                 </div>
+
+                
             </div>
             <div class="cards">
                 <div class="card-single">
@@ -367,8 +386,8 @@
                             <!-- <span class="las la-angle-down"></span> -->
                         </div>
                     </div>
-                    <div class="card-grid-alert warning">
-                        <span class="icon las la-exclamation-circle"></span>
+                    <div class="card-grid-alert show warning">
+                        <i class="icon las la-exclamation-circle"></i>
                         <span class="msg"><Strong>Warning!!</Strong> Se completo con un fallo en la tarea</span>
                         <span class="btn-close">
                             <span class="close las la-times"></span>
@@ -416,7 +435,7 @@
     </div>
 
     <!-- Begin Scripts -->
-    <script src="./js/menu.js"></script>
+    <script type="module" src="./js/menu.js"></script>
     <!-- End Scripts -->
 
 </body>

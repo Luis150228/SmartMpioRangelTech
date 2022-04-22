@@ -534,10 +534,11 @@ main{
     overflow: hidden;
     box-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.2);
     max-width: 35rem;
+    max-height: 3rem;
 }
 
 .show{
-    animation: show_slide 1.5s ease-in-out;
+    animation: show_slide 1.5s ease;
 }
 
 .hide{
@@ -546,16 +547,16 @@ main{
 
 @keyframes show_slide {
     0%{
-        transform: translateX(100%);
+        transform: translateY(100%);
     }
     40%{
-        transform: translateX(-10%);
+        transform: translateY(-10%);
     }
     80%{
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
     100%{
-        transform: translateX(-1px);
+        transform: translateY(-1px);
     }
 }
 
@@ -713,4 +714,114 @@ main{
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 5px 20PX;
     margin-bottom: 5px;
+}
+
+
+.form-element-file{
+    display: flex;
+    /* align-items: center; */
+    justify-items: center;
+    flex-direction: column;
+    min-height: 10vh;
+}
+
+.form-element-file .up-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 10vh;
+    /* width: 30vh; */
+    border-radius: 5px;
+    border: 2px dashed var(--color-primary);
+    cursor: pointer;
+}
+
+.form-element-file:where(i, p){
+    color: var(--color-main);
+}
+
+.form-element-file i{
+    font-size: 2rem;
+}
+
+.form-element-file p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.section-file .row{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0px 20px;
+    background: var(--color-main);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-file .row i{
+    font-size: 24px;
+    color: var(--color-primary);
+}
+
+.section-file .row .content{
+    width: 100%;
+    margin-left: 2rem;
+}
+
+.section-file .details span{
+    font-size: 12px;
+    color: var(--color-primary);
+}
+
+.progress-area .row .content{
+    width: 100%;
+    /* background: var(--color-secondary); */
+    margin-left: 15px;
+    
+}
+
+.progress-area .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    /* flex-direction: column; */
+}
+
+.progress-area .progress-bar{
+    background: var(--color-primary);
+    height: 6px;
+    margin-bottom: 2px;
+    border-radius: 10px;
+}
+
+.progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: var(--color-hover);
+    border-radius: inherit;
+}
+
+.uploaded-area{
+    max-height: 100px;
+    overflow-y: scroll;
+
+.uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+}
+
+.uploaded-area .details .size-file{
+    font-size: 9px;
+    color: var(--color-hover);
+}
+
+.uploaded-area .row .icon{
+    color: greenyellow;
+    font-size: 16px;
 }
